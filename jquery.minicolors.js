@@ -8,21 +8,9 @@
  * @license: http://opensource.org/licenses/MIT
  *
  */
-(function (factory) {
-    /* jshint ignore:start */
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['jquery'], factory);
-    } else if (typeof exports === 'object') {
-        // Node/CommonJS
-	var doc = require("jsdom").jsdom();
-        module.exports = factory(require('jquery')(doc.defaultView), doc);
-    } else {
-        // Browser globals
-        factory(jQuery);
-    }
-    /* jshint ignore:end */
-}(function ($, document) {
+
+
+var factory = function ($, document) {
 
     'use strict';
 
@@ -1132,5 +1120,8 @@
                 updateFromInput(input, true);
             }, 1);
         });
+};
 
-}));
+exports.init = function($, document) {
+    return factory($, document);
+};
