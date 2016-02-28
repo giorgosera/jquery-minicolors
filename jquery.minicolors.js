@@ -15,7 +15,8 @@
         define(['jquery'], factory);
     } else if (typeof exports === 'object') {
         // Node/CommonJS
-        module.exports = factory(require('jquery')((require("jsdom").jsdom().defaultView)));
+	var doc = require("jsdom").jsdom();
+        module.exports = factory(require('jquery')(doc.defaultView), doc);
     } else {
         // Browser globals
         factory(jQuery);
