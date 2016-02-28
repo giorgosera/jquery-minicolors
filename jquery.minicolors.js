@@ -22,7 +22,7 @@
         factory(jQuery);
     }
     /* jshint ignore:end */
-}(function ($) {
+}(function ($, document) {
 
     'use strict';
 
