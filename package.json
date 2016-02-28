@@ -11,7 +11,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "jquery" : ">= 1.7.x"
+    "jquery": ">= 1.7.x",
+    "jsdom": "^8.0.4"
   },
   "repository": {
     "type": "git",
